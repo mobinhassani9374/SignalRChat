@@ -1,0 +1,38 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>چت گروهی</title>
+    <script src="~/lib/signalr/dist/browser/signalr.js"></script>
+    <script src="~/lib/chat.js"></script>
+</head>
+<body>
+    <div id="intro">
+        <p>نام خود را وارد نمایید : </p>
+        <p><input type="text" id="txtName" /></p>
+        <p><input type="button" value="ثبت و ورود" onclick="saveName();" /></p>
+    </div>
+
+    <div id="wellcome" style="display:none;">
+        <p>خوش آمدید : <label id="wellcome-name"></label></p>
+    </div>
+
+    <div id="sendMessage" style="display:none;">
+        <p>متن پیا شما : </p>
+        <p><input type="text" id="txtMessage" /></p>
+        <p><input type="button" onclick="send();" value="ارسال" /></p>
+    </div>
+
+    <div id="allMessage">
+
+    </div>
+
+
+</body>
+</html>
